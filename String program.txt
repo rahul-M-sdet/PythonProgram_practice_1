@@ -1,0 +1,135 @@
+String: program to reverse the order of word in given string.
+# reverse the order of word in given basestring
+
+s = 'learning python is very very easy'
+l = s.split()
+l1 = l[::-1]
+output = ' '.join(l1)
+print(output)
+
+Q. reverse the total string
+s = 'learning python is very very easy'
+result = ''
+for ele in s:
+    result = ele + result
+    
+print(result)
+
+Q. reverse each word in given string (asked in CGI and Sony)
+s = 'learning python is very easy'
+l = s.split()
+l1 = []
+for ch in l:
+        l1.append(ch[::-1])
+output = ' '.join(l1)
+print(output)
+
+Q. reverse every 2nd word in the given string
+s = 'one two three four five six'
+l = s.split()
+l1 = []
+i = 0
+while i < len(l):
+    if i%2 == 0:
+        l1.append(l[i])
+    else:
+        l1.append(l[i][::-1])
+    i +=1
+        
+output = ' '.join(l1)
+print(output)
+
+
+Q. program to find the char present at even and odd index in a given string
+s = 'durgesoft'
+i = 0
+print("The char present at even index is:")
+while i < len(s):
+    print(s[i])
+    i = i + 2
+print("*************************")
+s = 'durgesoft'
+i = 1
+print("The char present at odd index is:")
+while i < len(s):
+    print(s[i])
+    i = i + 2
+
+Q. print the output in given format
+s = 'B4A1D3'
+#Output = 'ABD134'
+
+char = []
+digit = []
+for ch in s:
+    if ch.isalpha():
+        char.append(ch)
+    else:
+        digit.append(ch)
+        
+output=(sorted(char) + sorted(digit))
+result = ''.join(output) 
+print(result)
+
+
+
+Q. find how many times each char present in given string
+
+str = 'Iloveprogramming'
+s1 = set(str)
+for ch in s1:
+    print('{} occured {}'.format(ch,str.count(ch)))
+
+Q. find how many times each char present in given string by using dictionary
+
+s = 'Iloveprogramming'
+d = {}
+for ch in s:
+    d[ch] = d.get(ch,0)+1
+
+for k,v in sorted(d.items()):
+    print('{} occured {} times'.format(k,v))
+
+Q. print each vowels occured how many times.
+str ='Ilovepythonprogramming'
+v = {'a','e','i','o','u','A','E','I','O','U'}
+d = {}
+for ch in str:
+    if ch in v:
+        d[ch] = d.get(ch,0)+1
+for k,v in sorted(d.items()):
+    print('{} occured {} times'.format(k,v))
+
+
+Q. check both string are anagram
+
+s1 = input("Enter the string:")
+s2 = input("Enter the string:")
+if sorted(s1) == sorted(s2):
+    print("Both the string are anagram ")
+else:
+    print("strings are not anagram")
+
+Q. check both string are anagram
+
+s1 = input("Enter the string:")
+
+if s1 == s1[::-1]:
+    print(" string are palindrom")
+    
+else:
+    print("Not a palindrom")
+
+Q. check both string are anagram
+
+s1 = input("Enter the string: ")
+s2 = input("Enter the string: ")
+
+if sorted(s1) == sorted(s2):
+    print("Both string are anagram")
+    
+else:
+    print("string are not anagram")
+
+
+   
